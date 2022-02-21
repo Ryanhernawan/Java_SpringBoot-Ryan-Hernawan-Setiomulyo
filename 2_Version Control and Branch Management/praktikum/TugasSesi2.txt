@@ -1,0 +1,20 @@
+1. Buatlah Repository = link repository https://github.com/Ryanhernawan/Java_SpringBoot-Ryan-Hernawan-Setiomulyo
+2. Implementasi Branching yang terdiri dari master, development FeatureA, FeatureB =
+    Branching Development = git checkout -b development
+    Branching FeatureA = git checkout -b featureA
+    Branching featureB = git checkout -b featureB
+
+3. Implementasi Push, Pull, Stash dan Merge = 
+    Push = Git push origin master
+    Pull = Git pull origin master
+    Stash = git stash -> git stash apply
+    Merge = step 1 git checkout (Branch yang ingin di merge)
+            step 2 git merge (Branch yang ingin digabungkan)
+            contoh -> git checkout master
+                      git merge featureA
+
+4. Implementasi Sebuah Penanganan Conflict di Branch =
+    Jika terjadi sebuah konflik yang berada pada branch yang bisa terjadi karena kedua Branch
+    mengerjakan di file dan line code yang sama dapat dengan mengimplementasikan git stash 
+    lalu dilakukan git apply kembali. Lalu jika terdapat pop-up message code yang ada pada 
+    line yang sama maka kita dapat melalakukan klik pada bagian "Accept Both Changes"
