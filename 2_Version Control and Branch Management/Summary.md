@@ -1,5 +1,6 @@
-## 2_Version Control and Branch Management
-Git Merupakan salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.Pengontrol versi bertugas mencatat setiap perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri.
+## 2 Version Control and Branch Management
+## Resume
+1.Git Merupakan salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.Pengontrol versi bertugas mencatat setiap perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri.
 
 
 Pada pengenalan Git ada beberapa hal yang harus diperhatikan seperti pengenelaan apa itu git, fungsi, fungsi dari git, cara install dan setting git,cara kerja dari git dan github itu sendiri, membuat repository baru di github, menyambungkan antara git dengan local file yang berada pada komputer kita, lalu menyambungkan antara project yang kita sudah buat melalui git lalu ke github. Pada dasarnya Git merupakan salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.Pengontrol versi bertugas mencatat setiap perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri. Lalu GitHub merupakan merupakan manajemen project, sistem versioning code, sekaligus platform jaringan sosial bagi para developer seluruh dunia sehingga melalui platform ini memudahkan developer dalam mengembangkan sebuah karya.
