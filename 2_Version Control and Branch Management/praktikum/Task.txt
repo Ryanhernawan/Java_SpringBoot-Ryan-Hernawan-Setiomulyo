@@ -5,8 +5,8 @@
     Branching featureB = git checkout -b featureB
 
 3. Implementasi Push, Pull, Stash dan Merge = 
-    Push = Git push origin master
-    Pull = Git pull origin master
+    Push = git push origin master
+    Pull = git pull origin master
     Stash = git stash -> git stash apply
     Merge = step 1 git checkout (Branch yang ingin di merge)
             step 2 git merge (Branch yang ingin digabungkan)
