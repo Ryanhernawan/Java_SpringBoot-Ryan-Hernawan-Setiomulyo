@@ -35,9 +35,8 @@ Dengan menyambungkan Projek yang berada pada local file kita kedalam github mela
     - Pull = Git pull origin master
     - Stash = git stash -> git stash apply
     - Merge =step 1 git checkout (Branch yang ingin di merge)
-            step 2 git merge (Branch yang ingin digabungkan)
-            contoh -> git checkout master
-                      git merge featureA
+        - step 2 git merge (Branch yang ingin digabungkan)
+        - contoh -> git checkout master git merge featureA
 
 4. Implementasi Sebuah Penanganan Conflict di Branch =
    - Jika terjadi sebuah konflik yang berada pada branch yang bisa terjadi karena kedua Branch
