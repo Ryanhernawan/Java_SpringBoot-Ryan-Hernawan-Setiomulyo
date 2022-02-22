@@ -1,7 +1,7 @@
 ## 2 Version Control and Branch Management
 ## Resume
 Dalam materi kali ini hal-hal yang dipelajari seperti :
-    1. Pengenalan Git 
+    - Pengenalan Git 
     2. Fungsi dari Git
     3. Cara install dan setting Git
     4. Cara kerja Git dan github
