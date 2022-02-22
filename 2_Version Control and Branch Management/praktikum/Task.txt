@@ -8,7 +8,7 @@
     Push = git push origin master
     Pull = git pull origin master
     Stash = git stash -> git stash apply
-    Merge = step 1 git checkout (Branch yang ingin di merge)
+    Merge = step 1 git checkout (nama branch)
             step 2 git merge (Branch yang ingin digabungkan)
             contoh -> git checkout master
                       git merge featureA
