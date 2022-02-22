@@ -25,7 +25,7 @@ Dengan menyambungkan Projek yang berada pada local file kita kedalam github mela
 8. Git Merge dan lainnya
 ## Task
 1. Buatlah Repository = link repository https://github.com/Ryanhernawan/Java_SpringBoot-Ryan-Hernawan-Setiomulyo
-2. Implementasi Branching yang terdiri dari master, development FeatureA, FeatureB =
+2. Implementasi Branching yang terdiri dari master, development, FeatureA, FeatureB =
     Branching Development = git checkout -b development
     Branching FeatureA = git checkout -b featureA
     Branching featureB = git checkout -b featureB
@@ -44,6 +44,12 @@ Dengan menyambungkan Projek yang berada pada local file kita kedalam github mela
     mengerjakan di file dan line code yang sama dapat dengan mengimplementasikan git stash 
     lalu dilakukan git apply kembali. Lalu jika terdapat pop-up message code yang ada pada 
     line yang sama maka kita dapat melalakukan klik pada bagian "Accept Both Changes"
+
+5. Merge No Fast Forward
+implementasi merge no fast foward dengan cara :
+- git merge --no--ff (nama branch yang ingin dimerge)
+contoh :
+- git merge --no--ff featrueB
 
 
 
