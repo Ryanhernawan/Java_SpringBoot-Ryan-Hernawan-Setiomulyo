@@ -28,6 +28,5 @@ public class Task1 {
         System.out.println("Jumlah Kosonan = " + konsonan);
         System.out.println("Total Karakter = " + kata.length());
 
-
     }
 }
