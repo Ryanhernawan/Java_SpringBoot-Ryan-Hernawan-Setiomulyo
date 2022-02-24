@@ -3,19 +3,21 @@ import java.util.Scanner;
 public class Task7_Sesi4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int jum =1;
+
+        System.out.print("Masukan Angka : ");
+        int tinggi = input.nextInt();
 
 
-        System.out.println("Masukan Angka : ");
-        int Angka = input.nextInt();
-
-        for (int i=1; i<= Angka; i++){
-            for (int j=1; j<= Angka-i; j++){
-                System.out.println(" ");
+        for (int i=1; i<=tinggi; i++){
+            for (int k=tinggi-i; k>0; k--){
+                System.out.print(" ");
             }
-            for (int k=1; k<=i; k++){
-                System.out.println("*");
+            for (int j=1; j<=jum; j++){
+                System.out.print("*");
             }
-            System.out.println("\n");
+            jum+=2;
+            System.out.print("\n");
         }
     }
 }
