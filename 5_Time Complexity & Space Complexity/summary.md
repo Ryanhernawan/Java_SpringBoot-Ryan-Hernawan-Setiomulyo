@@ -8,12 +8,12 @@ Beberapa hal yang dipelajari dalam materi ini Time Complexity
 Ukuran waktu berapa lama operasi" dapat berjalan
 seperti operasi penjumlahan, perkalian dan dapat juga operasi seperti
 pemberian nilai pemberian nilai dan lainnya
-##Jenis - jenis time complexity
-- Constant Time -> Tidak terdapat proses perulangan
-- Linear Time -> Terdapat di dalam proses perulangan
-- Logarithmic Time -> Terdapat method logaritma
-- Quadratic Time ->
-##Batasan Waktu
+## Jenis - jenis time complexity
+- Constant Time
+- Linear Time
+- Logarithmic Time
+- Quadratic Time
+## Batasan Waktu
 - Jika n <=1.000.000 Maka dapat dengan O(n) / O(n log n0
 - Jika n <= 10.000 Maka dapat dilakukan dengan O(n^2)
 - Jika n <= 500 Maka dapat dilakukan dengan O(n^3)
