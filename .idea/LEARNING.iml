@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/4_Basic Programming" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/4_BasicProgramming/praktikum" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/5_Time Complexity &amp; Space Complexity/praktikum" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
