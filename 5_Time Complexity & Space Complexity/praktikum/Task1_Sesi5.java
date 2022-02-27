@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class Task1_Sesi5 {
     public static  boolean PrimeNumber(int count){
-        boolean result = true;
+//        boolean result = true;
         if (count < 2){
             return false;
         }
         for (int i=2; i<count; i++){
             if (count % i == 0){
-                result = false;
+                return false;
             }
         }
-        return result;
+        return true;
     }
 
 

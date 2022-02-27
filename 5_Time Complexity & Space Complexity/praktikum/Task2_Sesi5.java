@@ -1,27 +1,27 @@
+//package com.alta.Sesi_5;
+
 import java.util.Scanner;
 
 public class Task2_Sesi5 {
-    public static int pow(int BilanganX, int BilanganN){
-        int count = 1;
-        for (int i=0; i<BilanganN; i++){
-            count *= BilanganX;
+    public static int count(int numberX, int numberN){
+        int result = 1;
+        for (int i=1; i<=numberN; i++){
+            result = result * numberX;
         }
-        return count;
+        return result;
     }
 
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int total;
+        int numberX;
+        int numberN;
 
         System.out.print("X : ");
-        int BilanganX = input.nextInt();
-
+        numberX = input.nextInt();
         System.out.print("N : ");
-        int BilanganN = input.nextInt();
+        numberN = input.nextInt();
 
-        total =pow(BilanganX,BilanganN);
-        System.out.print("Hasil : " + total);
-
+        System.out.println(count(numberX,numberN));
     }
 }
