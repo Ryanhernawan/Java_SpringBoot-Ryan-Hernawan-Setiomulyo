@@ -1,10 +1,10 @@
-##6&7 Collection
-##Resume
+## 6&7 Collection
+## Resume
 Beberapa hal yang dipelajari 
 - Jenis-jenis collection yang ada pada java
 - Menjelaskan setiap method yang digunakan disetiap jenis collection
 - Menjelaskan implementasi dari setiap collection
-##Jenis-Jenis Collection(Iterable)
+## Jenis-Jenis Collection(Iterable)
 - Iterable
 - Iterator
 - Collection
@@ -14,7 +14,7 @@ Beberapa hal yang dipelajari
 - Sorted
 - Queue
 - Deque
-##Jenis-jenis Collection(Map)
+## Jenis-jenis Collection(Map)
 - Map
 - Hashmap
 - WeakHashmap
