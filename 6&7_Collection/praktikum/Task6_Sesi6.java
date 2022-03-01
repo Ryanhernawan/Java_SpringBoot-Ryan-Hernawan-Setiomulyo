@@ -8,9 +8,7 @@ public class Task6_Sesi6 {
             for (int j=i; j<i+k; j++){
                 sum = sum + array[j];
             }
-           if (sum > max){
-               max = sum;
-           }
+            max = Math.max(sum, max);
         }
         return max;
     }
