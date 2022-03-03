@@ -13,6 +13,8 @@ Beberapa hal yang dipelajari dalam materi ini
 ## Implementasi
 - Recursive dapat digunakan dalam menghitung bilangan prima, faktorial dan lainnya
 - Number Theory bisanya digunakan untuk menghitung bilangan prima, faktorial, faktor prima, KPK, dan FPB
+- Search digunakan untuk mencari data dari sekumpulan data yang ada
+- Sorting untuk mengurutkan data
 ## Jenis-jenis Searching dan Sorting
 - Dalam searching ada 2 metode yaitu dengan linear search O(n) dan menggunakan Builtins Search
 - Dalam Sorting ada 4 metode yaitu dengan Selection Sort O(n^2), Counting Sort O(n + k), Merge Sort O(log n), dan Builtins Sort
