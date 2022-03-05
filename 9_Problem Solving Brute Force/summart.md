@@ -5,7 +5,7 @@ Beberapa hal yang dipelajari pada materi kali ini adalah
 - Metode-metode yang ada pada problem solving
 - implementsi dari setiap metode yang ada
 ## Apa itu Problem Solving Paradigm
-- Bagaimana kita menyelesaikan sebuah masalah. 
+- suatu metode-metode yang didalamnya terdapat beberapa cara bagaimana kita menyelesaikan sebuah masalah. 
 ## Metode-metode yang ada pada problem solving
 - Complete search (Brute Force)-> cara mengecek suatu masalah dengan mengecek semua data yang ada
 - Divide and Conquer -> suatu cara untuk mengecek sebuah masalah dengan cara memecah data itu menjadi kecil-kecil.
