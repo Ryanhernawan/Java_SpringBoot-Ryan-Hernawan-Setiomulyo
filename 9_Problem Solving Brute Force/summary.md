@@ -15,3 +15,4 @@ Beberapa hal yang dipelajari pada materi kali ini adalah
   - Complete Search -> Dapat digunakan ketika ingin mencari nilai max atau min dari sebuah data 
   - Divide and Conquer -> Dapat diimplementasikan dengan Binary Search
   - Greedy -> Biasanya diimplementasikan dalam bentuk data graph seperti database graphql
+  - Dynamic Programming -> Terdapat 2 metode implementasi yang ada pada Dynamic Programming yaitu dengan Top-Down dan Bottom-Up Method
