@@ -7,7 +7,7 @@ public class Task4_Sesi10 {
 //    }
 
     public static void main(String[] args) {
-        int input = 4;
+        int input = 6;
         String [] romawi = {"M", "CM", "D", "CD", "C", "XC", "L", "XL",
                 "X", "IX", "V", "IV", "I" };
         int [] angka = {1000, 900, 500, 400, 100, 90,
@@ -23,8 +23,6 @@ public class Task4_Sesi10 {
             }
             System.out.println(strromawi);
         }
-        else {
-            System.out.println("error");
-        }
+
     }
 }

@@ -5,6 +5,14 @@ import java.util.Arrays;
 // bottom-up
 public class Task2_Sesi10 {
     public static int fibo(int input){
+//        int [] map = new int[2];
+//        map[0] = 0;
+//        map[1] = 1;
+//        for (int i=2; i<=input; i++){
+//            map[i] = map[i-1] + map[i-2];
+//        }
+//        return map[input];
+
         if (input == 0 || input == 1){
             return input;
         }
@@ -21,7 +29,6 @@ public class Task2_Sesi10 {
     }
 
     public static void main(String[] args) {
-        int input = 8;
-        System.out.println(fibo(input));
+        System.out.println(fibo(50));
     }
 }
