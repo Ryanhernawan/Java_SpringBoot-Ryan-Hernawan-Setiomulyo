@@ -1,4 +1,5 @@
-USE alta_online_shop2;
+CREATE DATABASE alta_online_shop;
+USE alta_online_shop;
 
 	
 -- CREATING TABLE
