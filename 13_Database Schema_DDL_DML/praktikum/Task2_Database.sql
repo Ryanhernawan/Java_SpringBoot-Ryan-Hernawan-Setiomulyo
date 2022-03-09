@@ -7,10 +7,10 @@ CREATE TABLE user(
 id INT NOT NULL auto_increment primary key,
 nama varchar(255),
 alamat varchar(255),
-status_user varchar(100),
+status_user  varchar(100),
 gender varchar(25),
 created_at date,
-update_at date
+update_at text
 );
 
 CREATE TABLE product(
