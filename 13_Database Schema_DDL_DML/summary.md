@@ -15,3 +15,5 @@ Apa saja yang dipelajari pada materi kali ini
 1. One To One
 2. One To Many
 3. Many To Many
+## Link Draw.io Tugas DataBase
+https://drive.google.com/file/d/1Lw0ZP_mI_RCRk5xK_Q3hpHmDI5rbMG4C/view?usp=sharing
