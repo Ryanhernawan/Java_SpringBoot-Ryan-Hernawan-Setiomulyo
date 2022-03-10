@@ -1,6 +1,6 @@
 ## 14 Join, Union, Agregasi, Subquery, Function (DBMS)
 ## Resume
-Beberapa hal yang dipelajari dimateri kali ini
+Beberapa hal yang dipelajari dimateri Database kali ini
 - Join
 - Union
 - Agregasi
@@ -12,7 +12,6 @@ Beberapa hal yang dipelajari dimateri kali ini
 1. DDl -> Data Definition Language
 2. DML -> Data Manipulation Language
 3. DCL -> Data Control Language
-## Database Relationships
 ## Pengertian dari Join, Union, Agregasi, Subquery, Function
 - Join -> Sebuah query untuk menggabungkan data tabel satu dengan tabel lain minimalnya 2 tabel
 - Union -> Menggabungkan data satu dengan data tabel yang ke 2
