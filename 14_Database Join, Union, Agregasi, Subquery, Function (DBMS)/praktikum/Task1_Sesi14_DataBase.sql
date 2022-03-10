@@ -192,15 +192,16 @@ SELECT * FROM transaction;
 -- SOAL SELECT
 SELECT Name , gender FROM users WHERE gender = 'M';
 SELECT * FROM product WHERE ID = 3;
-
-
-
+SELECT * FROM users WHERE created_at BETWEEN 1 AND 7 OR Name LIKE 'a%';
+SELECT * FROM users WHERE gender LIKE 'F%';
+SELECT * FROM users ORDER BY Name ASC;
 SELECT * FROM product WHERE nama = 'Paket  mingguan';
 
 
--- SOAL UPATE
-SELECT * FROM product;
+-- SOAL UPDATE
 
 
+-- SOAL DELETE
+DELETE  FROM product_types WHERE ID = 1;
 
 
