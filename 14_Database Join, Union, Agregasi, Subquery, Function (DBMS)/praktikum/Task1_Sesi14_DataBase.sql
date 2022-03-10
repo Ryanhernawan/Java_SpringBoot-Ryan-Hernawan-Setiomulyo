@@ -1,0 +1,206 @@
+-- CREATE DATABASE
+CREATE DATABASE alta_online_shop_sesi14;
+USE alta_online_shop_sesi14;
+
+-- CREATE TABLE
+create table users(
+ID int not null auto_increment primary key,
+Name varchar(255),
+status smallint,
+dob date,
+gender char(1),
+created_at timestamp,
+update_at timestamp
+);
+
+create table product(
+ID int auto_increment primary key,
+product_type_id int,
+operator_id int,
+code varchar(50),
+nama varchar(100),
+status smallint,
+create_at timestamp,
+update_at TIMESTAMP
+);
+
+create table product_types(
+ID int not null auto_increment primary key,
+name VARCHAR(255),
+create_at timestamp,
+update_at TIMESTAMP
+);
+
+create table product_description(
+ID int not null auto_increment primary key,
+description TEXT,
+create_at timestamp,
+update_at TIMESTAMP
+);
+
+create table operator(
+ID int  not null auto_increment primary key,
+name VARCHAR(255),
+create_at TIMESTAMP,
+update_at TIMESTAMP
+);
+
+CREATE TABLE transaction(
+ID int not null auto_increment primary key,
+User_Id int,
+Payment_Method_id int,
+status varchar(10),
+total_qty int(11),
+total_price numeric(25,2),
+created_at timestamp,
+uptdae_at timestamp
+);
+
+CREATE TABLE transaction_detail(
+ID int not null auto_increment primary key,
+status varchar(10),
+qty int(11),
+price numeric(25,2),
+created_at timestamp,
+uptdae_at timestamp
+);
+
+CREATE TABLE payment_methods(
+ID int not null auto_increment primary key,
+name varchar(255),
+status smallint,
+created_at timestamp,
+update_at timestamp
+);
+
+-- ADD FOREIGN KEY
+ALTER TABLE product ADD FOREIGN KEY (product_type_id) 
+REFERENCES  product_types(ID);
+
+ALTER TABLE product ADD FOREIGN KEY (operator_id) 
+REFERENCES  operator(ID);
+
+ALTER TABLE transaction ADD FOREIGN KEY (User_Id) 
+REFERENCES  users(ID);
+
+ALTER TABLE transaction ADD FOREIGN KEY (Payment_Method_id) 
+REFERENCES  payment_methods(ID);
+
+-- SOAL INSERT VALUES
+
+-- INSERT Operator
+INSERT INTO operator(name, create_at, update_at)
+VALUES('Telkomsel', '2022-03-10 11:59:00', '2022-03-10 13:00:00');
+INSERT INTO operator(name, create_at, update_at)
+VALUES('Indosat', '2022-03-10 11:59:00', '2022-03-10 13:00:00');
+INSERT INTO operator(name, create_at, update_at)
+VALUES('AXIS', '2022-03-10 11:59:00', '2022-03-10 13:00:00');
+INSERT INTO operator(name, create_at, update_at)
+VALUES('XL', '2022-03-10 11:59:00', '2022-03-10 13:00:00');
+INSERT INTO operator(name, create_at, update_at)
+VALUES('Three', '2022-03-10 11:59:00', '2022-03-10 13:00:00');
+
+SELECT * FROM operator;
+
+-- INSERT PRODUCT TYPE
+INSERT INTO product_types(name, create_at, update_at)
+VALUES('voucher', '2022-03-10 11:59:00', '2022-03-10 13:00:00');
+INSERT INTO product_types(name, create_at, update_at)
+VALUES('Kuota Data Internet', '2022-03-10 11:59:00', '2022-03-10 13:00:00');
+INSERT INTO product_types(name, create_at, update_at)
+VALUES('Paket Telepon & SMS', '2022-03-10 11:59:00', '2022-03-10 13:00:00');
+SELECT * FROM product_types;
+
+-- INSERT PRODUCT 2 DENGAN PRODUCT_TYPE_ID=1 DAN OPERATOR ID =3
+INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
+VALUES(1, 3, '001','Paket data harian', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
+INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
+VALUES(1, 3, '002','Paket data mingguan', '1', '2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
+-- INSERT PRODUCT 3 DENGAN PRODUCT_TYPE_ID=2 DAN OPERATOR ID =1
+INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
+VALUES(2, 1, '003','Paket  harian', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
+INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
+VALUES(2, 1, '004','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
+INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
+VALUES(2, 1, '005','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
+-- INSERT PRODUCT 3 DENGAN PRODUCT_TYPE_ID = 3 DAN OPERATOR ID = 4
+INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
+VALUES(3, 4, '006','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
+INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
+VALUES(3, 4, '006','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
+INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
+VALUES(3, 4, '006','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
+SElECT * FROM product;
+
+-- INSERT PRODUCT DESCRIPTION
+INSERT INTO product_description(description, create_at, update_at)
+VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan internet dengan Kuota Unlimited untuk 1 hari.', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+
+INSERT INTO product_description(description, create_at, update_at)
+VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan internet dengan Kuota Unlimited untuk 1 m.', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+
+SELECT * FROM product_description;
+
+
+-- INSERT 3 PAYMENT METHOD
+INSERT INTO payment_methods(name, status, created_at, update_at)
+VALUE('Virtual Account', 1, '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+
+INSERT INTO payment_methods(name, status, created_at, update_at)
+VALUE('Transfer Bank', 1, '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+
+INSERT INTO payment_methods(name, status, created_at, update_at)
+VALUE('Indomaret', 1, '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+
+SELECT * FROM payment_methods;
+
+-- INSERT 5 USER
+INSERT INTO users(Name, status, dob, gender, created_at, update_at)
+VALUES('Andhi', 1, '1999-1-9', 'M', '2022-03-10 11:59:00', '2022-03-10 11:59:00' );
+
+INSERT INTO users(Name, status, dob, gender, created_at, update_at)
+VALUES('Raka', 1, '2000-10-19', 'M', '2022-03-10 11:59:00', '2022-03-10 11:59:00' );
+
+INSERT INTO users(Name, status, dob, gender, created_at, update_at)
+VALUES('Rara', 1, '2002-12-12', 'F', '2022-03-10 11:59:00', '2022-03-10 11:59:00' );
+
+INSERT INTO users(Name, status, dob, gender, created_at, update_at)
+VALUES('Rini', 1, '1998-11-9', 'F', '2022-03-10 11:59:00', '2022-03-10 11:59:00' );
+
+INSERT INTO users(Name, status, dob, gender, created_at, update_at)
+VALUES('Arkan', 1, '1989-8-9', 'M', '2022-03-10 11:59:00', '2022-03-10 11:59:00' );
+
+SELECT * FROM users;
+
+-- INSERT TRANSAKSI DI MASING" USER
+SELECT * FROM transaction;
+
+
+-- INSERT TRANSAKSI DI MASING" TRANSAKSI
+SELECT * FROM transaction;
+
+
+
+-- SOAL SELECT
+SELECT Name , gender FROM users WHERE gender = 'M';
+SELECT * FROM product WHERE ID = 3;
+
+
+
+SELECT * FROM product WHERE nama = 'Paket  mingguan';
+
+
+-- SOAL UPATE
+SELECT * FROM product;
+
+
+
+
