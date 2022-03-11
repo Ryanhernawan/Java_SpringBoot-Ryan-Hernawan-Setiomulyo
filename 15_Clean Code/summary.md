@@ -1,5 +1,5 @@
-##14 Clean Code
-##Resume
+## 14 Clean Code
+## Resume
 Dalam meteri kali ini 3 hal yang saya pelajari yaitu
 - Apa itu Clean Code
 - Pentingnya mengimplementasikan Clean Code
