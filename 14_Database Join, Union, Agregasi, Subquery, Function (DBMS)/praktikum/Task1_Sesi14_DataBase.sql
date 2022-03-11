@@ -120,32 +120,52 @@ VALUES(1, 3, '002','Paket data mingguan', '1', '2022-03-10 11:59:00', '2022-03-1
 
 -- INSERT PRODUCT 3 DENGAN PRODUCT_TYPE_ID=2 DAN OPERATOR ID =1
 INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
-VALUES(2, 1, '003','Paket  harian', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+VALUES(2, 1, '003','Paket Unlimited', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
 
 INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
-VALUES(2, 1, '004','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+VALUES(2, 1, '004','Paket Sosmed', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+
 
 INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
-VALUES(2, 1, '005','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+VALUES(2, 1, '005','Paket Streaming Netflix', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
 
 -- INSERT PRODUCT 3 DENGAN PRODUCT_TYPE_ID = 3 DAN OPERATOR ID = 4
 INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
-VALUES(3, 4, '006','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+VALUES(3, 4, '006','Paket 1 Gb', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
 
 INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
-VALUES(3, 4, '006','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+VALUES (3, 4, '006','Paket 10 Gb', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
 
 INSERT INTO product(product_type_id, operator_id, code, nama, status, create_at, update_at)
-VALUES(3, 4, '006','Paket  mingguan', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
+VALUES(3, 4, '006','Paket 30 Gb', '1','2022-03-10 11:59:00', '2022-03-10 13:00:00' );
 
-SElECT * FROM product;
+SELECT * FROM product;
 
 -- INSERT PRODUCT DESCRIPTION
+-- ID 1
 INSERT INTO product_description(description, create_at, update_at)
 VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan internet dengan Kuota Unlimited untuk 1 hari.', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
-
+-- ID 2
 INSERT INTO product_description(description, create_at, update_at)
 VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan internet dengan Kuota Unlimited untuk 1 m.', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+-- ID 3
+INSERT INTO product_description(description, create_at, update_at)
+VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan internet dengan Kuota Unlimited untuk 1 Bulan', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+-- ID 4
+INSERT INTO product_description(description, create_at, update_at)
+VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan Sosial Media ', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+-- ID 5
+INSERT INTO product_description(description, create_at, update_at)
+VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan untuk streaming aplikasi Netflix', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+-- ID 6
+INSERT INTO product_description(description, create_at, update_at)
+VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan internet dengan Kuota 1 GB untuk satu hari', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+-- ID 7
+INSERT INTO product_description(description, create_at, update_at)
+VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan internet dengan Kuota 10 GB untuk satu hari', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
+-- ID 8
+INSERT INTO product_description(description, create_at, update_at)
+VALUES('paket internet khusus pelanggan prabayar yang memiliki kebutuhan internet dengan Kuota 30 GB untuk satu hari', '2022-03-10 11:59:00', '2022-03-10 11:59:00');
 
 SELECT * FROM product_description;
 
@@ -180,11 +200,11 @@ VALUES('Arkan', 1, '1989-8-9', 'M', '2022-03-10 11:59:00', '2022-03-10 11:59:00'
 
 SELECT * FROM users;
 
--- INSERT TRANSAKSI DI MASING" USER
+-- INSERT  3 TRANSAKSI DI MASING" USER
 SELECT * FROM transaction;
 
 
--- INSERT TRANSAKSI DI MASING" TRANSAKSI
+-- INSERT 3 PRODUCT  DI MASING" TRANSAKSI
 SELECT * FROM transaction;
 
 
@@ -202,6 +222,6 @@ SELECT * FROM product WHERE nama = 'Paket  mingguan';
 
 
 -- SOAL DELETE
-DELETE  FROM product_types WHERE ID = 1;
+
 
 
