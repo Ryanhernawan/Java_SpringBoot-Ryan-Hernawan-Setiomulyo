@@ -201,11 +201,102 @@ VALUES('Arkan', 1, '1989-8-9', 'M', '2022-03-10 11:59:00', '2022-03-10 11:59:00'
 SELECT * FROM users;
 
 -- INSERT  3 TRANSAKSI DI MASING" USER
+-- TRANSACTION USER ID 1
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(1, 1, 1, 3, 30.000, '2022-03-11 12:00:00', '2022-03-11 12:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(1, 1, 1, 2, 20.000, '2022-03-11 13:00:00', '2022-03-11 13:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(1, 1, 1, 1, 10.000, '2022-03-11 14:00:00', '2022-03-11 14:00:00' );
+
+-- TRANSACTION USER ID 2
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(2, 2, 1, 1, 10.000, '2022-03-11 12:00:00', '2022-03-11 12:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(2, 1, 1, 2, 20.000, '2022-03-11 13:00:00', '2022-03-11 13:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(2, 1, 1, 1, 10.000, '2022-03-11 14:00:00', '2022-03-11 14:00:00' );
+
+-- TRANSACTION USER ID 3
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(3, 1, 1, 3, 30.000, '2022-03-11 12:00:00', '2022-03-11 12:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(3, 2, 1, 2, 20.000, '2022-03-11 13:00:00', '2022-03-11 13:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(3, 1, 1, 1, 10.000, '2022-03-11 14:00:00', '2022-03-11 14:00:00' );
+
+-- TRANSACTION USER ID 4
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(4, 1, 1, 1, 10.000, '2022-03-11 12:00:00', '2022-03-11 12:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(4, 2, 1, 1, 20.000, '2022-03-11 13:00:00', '2022-03-11 13:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(4, 3, 1, 1, 10.000, '2022-03-11 14:00:00', '2022-03-11 14:00:00' );
+
+-- TRANSACTION USER ID 5
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(5, 2, 1, 5, 50.000, '2022-03-11 12:00:00', '2022-03-11 12:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(5, 1, 1, 2, 20.000, '2022-03-11 13:00:00', '2022-03-11 13:00:00' );
+INSERT INTO transaction(User_id, Payment_Method_id, status, total_qty, total_price, created_at, update_at)
+VALUES(5, 3, 1, 1, 10.000, '2022-03-11 14:00:00', '2022-03-11 14:00:00' );
+
 SELECT * FROM transaction;
+
+-- INSERT TRANSACTION DETAIL
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 1, 1, 3, 30.000,'2022-03-11 12:00:00','2022-03-11 12:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(2, 2, 1, 2, 20.000,'2022-03-11 13:00:00','2022-03-11 13:00:00');
+
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 3, 1, 1, 10.000,'2022-03-11 14:00:00','2022-03-11 14:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 4, 1, 1, 10.000,'2022-03-11 12:00:00','2022-03-11 12:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 5, 1, 2, 20.000,'2022-03-11 13:00:00','2022-03-11 13:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 6, 1, 1, 10.000,'2022-03-11 14:00:00','2022-03-11 14:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 7, 1, 3, 30.000,'2022-03-11 12:00:00','2022-03-11 12:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 8, 1, 2, 20.000,'2022-03-11 13:00:00','2022-03-11 13:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 9, 1, 1, 10.000,'2022-03-11 14:00:00','2022-03-11 14:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 10, 1, 1, 10.000,'2022-03-11 12:00:00','2022-03-11 12:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 11, 1, 1, 20.000,'2022-03-11 13:00:00','2022-03-11 13:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 12, 1, 1, 10.000,'2022-03-11 14:00:00','2022-03-11 13:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 13, 1, 5, 50.000,'2022-03-11 12:00:00','2022-03-11 12:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 14, 1, 2, 20.000,'2022-03-11 13:00:00','2022-03-11 13:00:00');
+
+INSERT INTO transaction_detail(product_id, transaction_id, status, qty, price, created_at, update_at)
+VALUES(3, 15, 1, 1, 10.000,'2022-03-11 14:00:00','2022-03-11 14:00:00');
+
+select * from transaction_detail;
 
 
 -- INSERT 3 PRODUCT  DI MASING" TRANSAKSI
+
 SELECT * FROM transaction;
+
 
 
 
@@ -215,13 +306,16 @@ SELECT * FROM product WHERE ID = 3;
 SELECT * FROM users WHERE created_at BETWEEN 1 AND 7 OR Name LIKE 'a%';
 SELECT * FROM users WHERE gender LIKE 'F%';
 SELECT * FROM users ORDER BY Name ASC;
-SELECT * FROM product WHERE nama = 'Paket  mingguan';
+select * from product where ID between 1 and 5;
 
 
 -- SOAL UPDATE
 
 
 -- SOAL DELETE
+DELETE FROM product WHERE ID = 1;
+DELETE FROM product WHERE product_type_id = 1;
 
+select * from product;
 
 
