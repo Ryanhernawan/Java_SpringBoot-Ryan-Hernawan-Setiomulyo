@@ -295,8 +295,7 @@ select * from transaction_detail;
 
 -- INSERT 3 PRODUCT  DI MASING" TRANSAKSI
 
-SELECT * FROM transaction;
-
+SELECT * FROM users;
 
 
 
@@ -304,7 +303,7 @@ SELECT * FROM transaction;
 SELECT Name , gender FROM users WHERE gender = 'M';
 SELECT * FROM product WHERE ID = 3;
 SELECT * FROM users WHERE created_at BETWEEN 1 AND 7 OR Name LIKE 'a%';
-SELECT * FROM users WHERE gender LIKE 'F%';
+SELECT Name , gender FROM users WHERE gender = 'F';
 SELECT * FROM users ORDER BY Name ASC;
 select * from product where ID between 1 and 5;
 
