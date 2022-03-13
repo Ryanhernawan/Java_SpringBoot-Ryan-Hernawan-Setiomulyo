@@ -2,6 +2,7 @@ package Task2_DataAbstraction;
 
 import java.util.Scanner;
 
+
 public class BasicCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -36,6 +37,8 @@ public class BasicCalculator {
         System.out.println("+++++++++++++++CALCULATOR+++++++++++++++");
         System.out.print("Masukan Pilihan Anda : ");
         int chooseOperation = scanner.nextInt();
+
+
 
 
         if (chooseOperation == 1){

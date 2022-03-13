@@ -1,71 +1,86 @@
 CREATE DATABASE alta_online_shop;
 USE alta_online_shop;
 
-	
+
 -- CREATING TABLE
-CREATE TABLE user(
-id INT NOT NULL auto_increment primary key,
-nama varchar(255),
-alamat varchar(255),
-status_user  varchar(100),
-gender varchar(25),
-created_at date,
-update_at text
+
+create table users(
+ID int not null auto_increment primary key,
+Name varchar(255),
+status smallint,
+dob date,
+gender char(1),
+created_at timestamp,
+update_at timestamp
 );
 
-CREATE TABLE product(
-id INT NOT NULL auto_increment primary key,
-nama varchar(255),
-harga_produk integer,
-quantity_produk integer,
-description_produk varchar(255),
-product_type varchar(100)
+create table product(
+ID int auto_increment primary key,
+product_type_id int,
+operator_id int,
+code varchar(50),
+nama varchar(100),
+status smallint,
+create_at timestamp,
+update_at TIMESTAMP
 );
 
-CREATE TABLE product_type(
-id INT NOT NULL auto_increment primary key,
-nama varchar(255),
-harga_produk integer,
-quantity_produk integer,
-description_produk varchar(255),
-product_type varchar(100)
+create table product_types(
+ID int not null auto_increment primary key,
+name VARCHAR(255),
+create_at timestamp,
+update_at TIMESTAMP
 );
 
-CREATE TABLE operator(
-id INT NOT NULL auto_increment primary key
+create table product_description(
+ID int not null auto_increment primary key,
+description TEXT,
+create_at timestamp,
+update_at TIMESTAMP
 );
 
-CREATE TABLE product_description(
-id INT NOT NULL auto_increment primary key,
-nama varchar(255),
-detail_product varchar(255)
+create table operator(
+ID int  not null auto_increment primary key,
+name VARCHAR(255),
+create_at TIMESTAMP,
+update_at TIMESTAMP
 );
 
-CREATE TABLE payment_method(
-id INT NOT NULL auto_increment primary key,
-jenis_pembayaran varchar(100)
-);
-
-CREATE TABLE transaction_(
-id INT NOT NULL auto_increment primary key,
-order_status varchar(100),
-order_alamat varchar(255),
-order_date date 
+CREATE TABLE transaction(
+ID int not null auto_increment primary key,
+User_Id int,
+Payment_Method_id int,
+status varchar(10),
+total_qty int(11),
+total_price numeric(25,2),
+created_at timestamp,
+uptdae_at timestamp
 );
 
 CREATE TABLE transaction_detail(
-id INT NOT NULL auto_increment primary key,
-harga int,
-deskripsi varchar(255),
-quantity_produk int 
+ID int not null auto_increment primary key,
+status varchar(10),
+qty int(11),
+price numeric(25,2),
+created_at timestamp,
+uptdae_at timestamp
+);
+
+CREATE TABLE payment_methods(
+ID int not null auto_increment primary key,
+name varchar(255),
+status smallint,
+created_at timestamp,
+update_at timestamp
 );
 
 CREATE TABLE kurir(
-id int not null auto_increment primary key,
-nama varchar(255),
-created_at date,
-update_at date
+ID int not null auto_increment primary key,
+name VARCHAR(255),
+created_at TIMESTAMP,
+updated_at TIMESTAMP
 );
+
 -- -- --
 -- ADD COLUMN ON KURIR TABLE
 ALTER TABLE kurir ADD COLUMN ongkos_dasar int;
@@ -76,6 +91,7 @@ ALTER TABLE kurir RENAME TO shipping;
 -- DROP TABLE SHIPPING
 DROP TABLE shipping;
 
+select * from shipping;
 
 
 
