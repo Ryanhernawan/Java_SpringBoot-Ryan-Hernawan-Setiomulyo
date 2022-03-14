@@ -91,7 +91,7 @@ ALTER TABLE kurir RENAME TO shipping;
 -- DROP TABLE SHIPPING
 DROP TABLE shipping;
 
-select * from shipping;
+
 
 
 
