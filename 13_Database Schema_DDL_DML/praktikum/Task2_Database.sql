@@ -80,10 +80,22 @@ name VARCHAR(255),
 created_at TIMESTAMP,
 updated_at TIMESTAMP
 );
+-- ADD FOREIGN KEY
+ALTER TABLE product ADD FOREIGN KEY (product_type_id) 
+REFERENCES  product_types(ID);
+
+ALTER TABLE product ADD FOREIGN KEY (operator_id) 
+REFERENCES  operator(ID);
+
+ALTER TABLE transaction ADD FOREIGN KEY (User_Id) 
+REFERENCES  users(ID);
+
+ALTER TABLE transaction ADD FOREIGN KEY (Payment_Method_id) 
+REFERENCES  payment_methods(ID);
 
 -- -- --
 -- ADD COLUMN ON KURIR TABLE
-ALTER TABLE kurir ADD COLUMN ongkos_dasar int;
+ALTER TABLE kurir ADD COLUMN ongkos_dasar INT;
 
 -- RENAME KURIR TABLE TO SHIPPING
 ALTER TABLE kurir RENAME TO shipping;
@@ -91,6 +103,18 @@ ALTER TABLE kurir RENAME TO shipping;
 -- DROP TABLE SHIPPING
 DROP TABLE shipping;
 
+-- ADD FOREIGN KEY
+ALTER TABLE product ADD FOREIGN KEY (product_type_id) 
+REFERENCES  product_types(ID);
+
+ALTER TABLE product ADD FOREIGN KEY (operator_id) 
+REFERENCES  operator(ID);
+
+ALTER TABLE transaction ADD FOREIGN KEY (User_Id) 
+REFERENCES  users(ID);
+
+ALTER TABLE transaction ADD FOREIGN KEY (Payment_Method_id) 
+REFERENCES  payment_methods(ID);
 
 
 
