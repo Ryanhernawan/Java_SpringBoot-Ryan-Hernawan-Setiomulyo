@@ -243,7 +243,7 @@ select * from product;
 -- 1
 SELECT * FROM transaction WHERE user_id = 1 UNION SELECT * FROM transaction WHERE user_id = 2;
 -- 2 
-SELECT SUM(total_price) FROM transaction WHERE user_id =1;
+SELECT user_id, SUM(total_price) Total_price FROM transaction WHERE user_id =1 GROUP BY user_id;
 -- 3
 SELECT COUNT(1) FROM transaction_detail WHERE product_id = 3;
 
