@@ -245,7 +245,26 @@ SELECT * FROM transaction WHERE user_id = 1 UNION SELECT * FROM transaction WHER
 -- 2 
 SELECT user_id, SUM(total_price) Total_price FROM transaction WHERE user_id =1 GROUP BY user_id;
 -- 3
-SELECT COUNT(1) FROM transaction_detail WHERE product_id = 3;
-
-
-
+ SELECT COUNT(1) jumlah FROM transaction_detail INNER JOIN
+product ON transaction_detail.product_id = product.id
+WHERE product.product_type_id = 2;
+-- 4
+SELECT * FROM product INNER JOIN product_types ON product.product_type_id
+= product_types.id;
+-- 5
+SELECT t.*, product.nama, users.nama FROM transaction t INNER JOIN trasaction_detail d ON t.id = d.transaction_id INNER JOIN product p ON p.id = d.product_id INNER JOIN users 
+u ON u.id = t.user_id;
+select * from product;
+-- 6
+CREATE TRIGGER user_delete BEFORE ON users FOR EACH ROW BEGIN
+DELETE FROM product WHERE id = old.id;
+END$$
+ -- 7
+CREATE TRIGGER transaction_detail_delete
+AFTER DELETE ON transactio_detail FOR EACH ROW
+BEGIN 
+UPDATE FROM transaction SET total_qty = total_qty - old.qty;
+UPDATE FROM transaction SET total_price = total_price - old.price;
+END$$
+-- 8
+SELECT * FROM product WHERE id NOT IN (SELECT product_id FROM transaction_detail);
