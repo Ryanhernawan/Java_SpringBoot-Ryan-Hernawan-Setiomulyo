@@ -217,7 +217,7 @@ SELECT * FROM transaction;
 -- SOAL SELECT
 SELECT Name , gender FROM users WHERE gender = 'M';
 SELECT * FROM product WHERE ID = 3;
-SELECT * FROM users WHERE created_at BETWEEN 1 AND 7 OR Name LIKE 'a%';
+SELECT * FROM users WHERE created_at BETWEEN '2022-03-9 11:04:13' AND '2022-03-16 11:04:13' OR name LIKE '%a%';
 SELECT Name , gender FROM users WHERE gender = 'F';
 SELECT * FROM users ORDER BY Name ASC;
 select * from product where ID between 1 and 5;
@@ -225,10 +225,10 @@ select * from product where ID between 1 and 5;
 
 -- SOAL UPDATE
 -- 1
-
+UPDATE product SET nama = 'product dummy' WHERE id = 1;
 -- 2
 UPDATE transaction_detail SET qty = 3 WHERE product_id = 1;
-SELECT * FROM transaction_detail;
+SELECT * FROM product;
 
 -- SOAL DELETE
 -- 1
