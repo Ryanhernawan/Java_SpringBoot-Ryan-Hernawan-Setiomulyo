@@ -215,10 +215,10 @@ SELECT * FROM transaction;
 
 
 -- SOAL SELECT
-SELECT Name , gender FROM users WHERE gender = 'M';
+SELECT name , gender FROM users WHERE gender = 'M';
 SELECT * FROM product WHERE ID = 3;
 SELECT * FROM users WHERE created_at BETWEEN '2022-03-9 11:04:13' AND '2022-03-16 11:04:13' OR name LIKE '%a%';
-SELECT Name , gender FROM users WHERE gender = 'F';
+SELECT name , gender FROM users WHERE gender = 'F';
 SELECT * FROM users ORDER BY Name ASC;
 select * from product where ID between 1 and 5;
 
