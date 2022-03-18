@@ -100,6 +100,7 @@
 -- a
 
 -- b
+> db.transaction_detail.update({product_id:"1"}, {product_id:"1", transaction_id:"1",status:"1", qty:"3", price:"30.000"})
 
 -- DELETE
 -- a
