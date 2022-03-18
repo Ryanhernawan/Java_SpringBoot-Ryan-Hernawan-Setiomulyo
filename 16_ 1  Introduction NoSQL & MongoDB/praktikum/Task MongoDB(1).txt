@@ -79,3 +79,19 @@
 > db.transaction.insert({user_id:"5", payment_method_id:"3", status:"1", total_qty:"1", total_price:"10.00", created_at:"2022-17-3", updated_at:"2022-17-3"})
 
 -- j
+
+
+-- 2 READ
+-- a
+> db.users.find({gender:"M"})
+
+-- b
+
+-- c
+> db.users.find({gender:"F"}).count();
+
+-- d
+> db.users.find().sort({name:1})
+
+-- e
+> db.product.find().limit(5)
