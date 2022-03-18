@@ -1,3 +1,4 @@
+use alta_online_shop
 -- 1
 -- a
 > db.operators.insert({_id: 1, name:"Rudi", created_at:"2022-17-3", update_at:"2022-17-3"})
