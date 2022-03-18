@@ -86,7 +86,7 @@
 > db.users.find({gender:"M"})
 
 -- b
-
+> db.users.find({_id:3})
 -- c
 > db.users.find({gender:"F"}).count();
 
