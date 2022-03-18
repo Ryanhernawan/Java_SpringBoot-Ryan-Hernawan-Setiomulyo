@@ -32,6 +32,16 @@ db.books.aggregate([
 
 }])
 
+4.
+db.authors.aggregrate([{
+$lookup:{
+	from: "books",
+	localField: "authorID",
+	foreignField: "_id",
+	as: "books"
+}
+}]);
+
 
 
 
