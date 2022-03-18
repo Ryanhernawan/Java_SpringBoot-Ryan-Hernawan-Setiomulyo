@@ -95,3 +95,14 @@
 
 -- e
 > db.product.find().limit(5)
+
+-- UPDATE
+-- a
+
+-- b
+
+-- DELETE
+-- a
+
+-- b
+> db.product.remove({product_type_id : "1"})
