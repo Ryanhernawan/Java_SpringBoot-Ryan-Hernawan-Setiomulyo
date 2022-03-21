@@ -47,3 +47,10 @@ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+INSERT INTO users(username, dob, gender)
+VALUES('raka', '1998-8-9', 'Male'),
+('Rani', '1998-5-10', 'Female'),
+('Mosi', '2000-8-19', 'Female'),
+('Sarah', '2003-1-1', 'Female');
+
+SELECT * FROM users;
