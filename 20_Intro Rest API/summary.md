@@ -26,3 +26,11 @@
     1. JSON
     2. XML
     3. SOAP
+- Harus memiliki HTTP Respone Code, contoh HTTP Response Code:
+    1. 200 (OK)
+    2. 201 (Created)
+    3. 400 (Bad Request)
+    4. 404 (Not Found)
+    5. 401 (Unauthorized)
+    6. 405 (Method Not Allowed)
+    7. 500 (Internal Server Error)
