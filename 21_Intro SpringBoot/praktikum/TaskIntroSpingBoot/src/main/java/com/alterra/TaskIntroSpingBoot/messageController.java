@@ -23,7 +23,15 @@ public class messageController {
 
         return mMessage;
     }
+    @PostMapping
+    public modelMessage postMessase(){
+        modelMessage mMessage = new modelMessage();
+        mMessage.setSucces(true);
+        mMessage.setMessage("Succes");
+        mMessage.setData("Hello World");
 
+        return mMessage;
+    }
 
 
 }
