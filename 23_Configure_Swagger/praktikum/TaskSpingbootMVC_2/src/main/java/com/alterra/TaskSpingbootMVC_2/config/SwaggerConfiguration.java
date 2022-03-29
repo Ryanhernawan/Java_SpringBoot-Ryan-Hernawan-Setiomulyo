@@ -1,4 +1,4 @@
-package com.alterra.ConfigureSwagger.Config;
+package com.alterra.TaskSpingbootMVC_2.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
