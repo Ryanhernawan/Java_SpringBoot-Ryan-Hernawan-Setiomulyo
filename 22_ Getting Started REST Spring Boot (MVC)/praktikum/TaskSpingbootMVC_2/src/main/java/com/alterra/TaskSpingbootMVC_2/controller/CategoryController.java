@@ -1,7 +1,8 @@
 package com.alterra.TaskSpingbootMVC_2.controller;
 
+import com.alterra.TaskSpingbootMVC_2.model.ModelBaseResponse;
 import com.alterra.TaskSpingbootMVC_2.model.ModelCategory;
-import com.alterra.TaskSpingbootMVC_2.repository.CategoryRepository;
+import com.alterra.TaskSpingbootMVC_2.sevice.ServiceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,21 +13,28 @@ import java.util.Optional;
 @RequestMapping("/v1")
 public class CategoryController {
     @Autowired
-    private CategoryRepository categoryRepository;
+    private ServiceCategory serviceCategory;
+
     @GetMapping("/posts")
-    public List<ModelCategory> getAllCategory(){
-        return categoryRepository.findAll();
+    public ModelBaseResponse getAllProduct(){
+        ModelBaseResponse<List<ModelCategory>> modelBaseResponse = new ModelBaseResponse<>();
+        modelBaseResponse.setSucces(true);
+        modelBaseResponse.setMessage("Succes");
+        modelBaseResponse.setData(serviceCategory.getAllProduct());
+       return modelBaseResponse;
     }
     @PostMapping("/posts")
-    public ModelCategory newCategory(@RequestBody ModelCategory payload){
-        return categoryRepository.save(payload);
+    public ModelBaseResponse<List<ModelCategory>> getNewProduct(@RequestBody ModelCategory payload){
+        ModelBaseResponse<List<ModelCategory>> modelBaseResponse = new ModelBaseResponse<>();
+        modelBaseResponse.setSucces(true);
+        modelBaseResponse.setMessage("Succes");
+        modelBaseResponse.setData(serviceCategory.getNewProduct(payload));
+        return modelBaseResponse;
     }
 
     @DeleteMapping("/posts/{id}")
-    public void deleteCategory (@PathVariable Long id){
-        Optional<ModelCategory> categoryById = categoryRepository.findById(id);
-        categoryById.ifPresent(res ->{
-            categoryRepository.delete(res);
-        });
+    public String deleteProductById (@PathVariable("id") Long id){
+        serviceCategory.deleteProductById(id);
+        return "Deleted";
     }
 }
