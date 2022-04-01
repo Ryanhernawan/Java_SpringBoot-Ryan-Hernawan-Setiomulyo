@@ -10,8 +10,8 @@ import java.util.List;
 
 @Repository
 public interface ProductsRepository extends CrudRepository<ProductsModel, Long> {
-    @Query("SELECT p FROM ProductsModel p WHERE p.category_id LIKE :category_id ")
-    List<ProductsModel> findProductWithCategory(@PathParam("category_id") Long category_id);
+//    @Query("SELECT p FROM ProductsModel p WHERE p.category_id LIKE :category_id ")
+//    List<ProductsModel> findProductWithCategory(@PathParam("category_id") Long category_id);
 
 
 }

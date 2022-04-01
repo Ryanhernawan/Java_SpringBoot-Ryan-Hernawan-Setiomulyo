@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class CategoriesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long category_id;
+    private Long id;
 
     @Column(name = "name")
     private String name;

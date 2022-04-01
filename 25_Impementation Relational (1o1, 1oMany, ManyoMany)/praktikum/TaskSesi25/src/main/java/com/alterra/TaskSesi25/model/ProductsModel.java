@@ -15,11 +15,14 @@ public class ProductsModel {
     @Column(name = "product_name")
     private String product_name;
 
-    @Column(name = "brand_id")
-    private Long brand_id;
+    @ManyToOne
+    @JoinColumn(name = "brand_id", referencedColumnName = "id")
+    BrandsModel brand;
 
-    @Column(name = "category_id")
-    private Long category_id;
+    //Relations
+    @ManyToOne
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+    CategoriesModel category;
 
     @Column(name = "model_year")
     private String model_year;

@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class BrandsModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long brands_id;
+    private Long id;
 
     @Column(name = "brand_name")
     private String brand_name;
