@@ -9,4 +9,5 @@ public interface BrandsService {
     List<BrandsModel> getAllBrands();
     BrandsModel getNewBrands(BrandsModel payload);
     void deleteBrandsById(Long id);
+
 }
