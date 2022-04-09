@@ -24,4 +24,4 @@
 - Warn -> color Yellow
 - Info -> color Green
 - Debug -> color Green
-- Trace -> color Green
+- Trace -> color Green.
