@@ -1,0 +1,6 @@
+package com.alterra.Task27_3.service;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+public interface UserService extends UserDetailsService {
+}
