@@ -37,9 +37,12 @@ public class AuthController {
 
     @GetMapping("/info")
     public ResponseEntity<?> getUserInfo(Principal principal){
+        String principal1 = principal.getName();
+        Map<String, Object> response = new HashMap<>();
+        response.put("data", principal1);
         if (principal == null){
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
-        return ResponseEntity.ok(principal.getName());
+        return ResponseEntity.ok(response);
     }
 }
