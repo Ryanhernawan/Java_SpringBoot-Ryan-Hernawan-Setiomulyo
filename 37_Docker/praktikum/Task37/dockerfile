@@ -1,0 +1,5 @@
+FROM openjdk:19-jdk-alpine3.15
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} task37.jar
+EXPOSE 8003
+ENTRYPOINT ["java", "-jar", "task37.jar"]
